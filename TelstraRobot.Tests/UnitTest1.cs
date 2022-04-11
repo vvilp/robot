@@ -96,7 +96,7 @@ public class Tests
             Assert.AreEqual(expected, sw.ToString());
         }
     }
-        
+
     [Test]
     public void Test6()
     {
@@ -182,6 +182,62 @@ public class Tests
             robot.RunStringCommand("PLACE 1,2");
             robot.RunStringCommand("REPORT");
             // did not give correct PLACE command with direction at begin. ignore other command
+            string expected = "";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
+
+    [Test]
+    public void Test12()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1,2x,NORTH");
+            robot.RunStringCommand("REPORT");
+            string expected = "";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
+
+    [Test]
+    public void Test13()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1,NORTH");
+            robot.RunStringCommand("REPORT");
+            string expected = "";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
+
+    [Test]
+    public void Test14()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1");
+            robot.RunStringCommand("REPORT");
+            string expected = "";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
+
+    [Test]
+    public void Test15()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1,2");
+            robot.RunStringCommand("REPORT");
             string expected = "";
             Assert.AreEqual(expected, sw.ToString());
         }
