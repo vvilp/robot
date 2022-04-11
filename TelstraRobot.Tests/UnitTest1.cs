@@ -242,4 +242,52 @@ public class Tests
             Assert.AreEqual(expected, sw.ToString());
         }
     }
+
+    [Test]
+    public void Test16()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1,2,EAST");
+            // Ignore place command when Place to incorrect position
+            robot.RunStringCommand("PLACE 6,6,EAST");
+            robot.RunStringCommand("REPORT");
+            // Remain previous position
+            string expected = "1,2,EAST\n";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
+
+    [Test]
+    public void Test17()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1,2,EAST");
+            robot.RunStringCommand("PLACE 6,6");
+            robot.RunStringCommand("PLACE 2,3");
+            robot.RunStringCommand("REPORT");
+            string expected = "2,3,EAST\n";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
+
+    [Test]
+    public void Test18()
+    {
+        // redirect console output to String writer for testing
+        using (StringWriter sw = new StringWriter())
+        {
+            Console.SetOut(sw);
+            robot.RunStringCommand("PLACE 1,2,EAST");
+            robot.RunStringCommand("PLACE 6,6");
+            robot.RunStringCommand("REPORT");
+            string expected = "1,2,EAST\n";
+            Assert.AreEqual(expected, sw.ToString());
+        }
+    }
 }

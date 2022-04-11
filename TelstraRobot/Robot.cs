@@ -94,25 +94,28 @@ namespace TelstraRobot
         /// Place robot at certain position and direction.
         /// Can place robot at incorrect position. If so, other command will be disgarded.
         /// </summary>
-        public void Place(int x, int y, Direction direction)
+        public void Place(Position position, Direction direction)
         {
             // Place robot at certain position and direction.
-            position.X = x;
-            position.Y = y;
-            this.direction = direction;
+            if (IsPosDirectionValid(position, direction))
+            {
+                this.position = position;
+                this.direction = direction;
+            }
         }
 
         /// <summary>
         /// Place robot at certain position.
         /// Can place robot at incorrect position. If so, other command will be disgarded.
         /// </summary>
-        public void Place(int x, int y)
+        public void Place(Position position)
         {
             // Place robot at certain position. direction remains the same
-            position.X = x;
-            position.Y = y;
+            if (IsPosValid(position))
+            {
+                this.position = position;
+            }
         }
-
 
         /// <summary>
         /// Check a position and direction
@@ -127,6 +130,28 @@ namespace TelstraRobot
         {
             // Check if position and direction valid
             if (p.X >= table.X_Size || p.X < 0 || p.Y >= table.Y_Size || p.Y < 0 || d == Direction.NONE)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// Check a position
+        /// </summary>
+        /// <returns>
+        ///       if position is valid 
+        ///           returns true 
+        ///       else 
+        ///           return false 
+        /// </returns>
+        public bool IsPosValid(Position p)
+        {
+            // Check if position is valid
+            if (p.X >= table.X_Size || p.X < 0 || p.Y >= table.Y_Size || p.Y < 0)
             {
                 return false;
             }
@@ -266,8 +291,7 @@ namespace TelstraRobot
                     //    ['PLACE', '1', '2']
                     if (comArray.Length == 4 || comArray.Length == 3)
                     {
-                        int x = -1;
-                        int y = -1;
+                        int x, y = -1;
                         Direction d = Direction.NONE;
                         if (!Int32.TryParse(comArray[1], out x) || !Int32.TryParse(comArray[2], out y))
                         {
@@ -285,12 +309,12 @@ namespace TelstraRobot
                         if (d == Direction.NONE)
                         {
                             // if place command do not contains direction, Place robot to new position.
-                            this.Place(x, y);
+                            this.Place(new Position(x, y));
                         }
                         else
                         {
                             // if place command contains direction, Place robot to new position and set direction.
-                            this.Place(x, y, d);
+                            this.Place(new Position(x, y), d);
                         }
                     }
                 }
