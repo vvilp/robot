@@ -1,5 +1,0 @@
-/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/publish/telstra_robot
-/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/publish/telstra_robot.dll
-/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/publish/telstra_robot.deps.json
-/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/publish/telstra_robot.runtimeconfig.json
-/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/publish/telstra_robot.pdb

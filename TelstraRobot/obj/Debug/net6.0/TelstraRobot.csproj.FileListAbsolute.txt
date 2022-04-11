@@ -1,0 +1,15 @@
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/bin/Debug/net6.0/TelstraRobot
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/bin/Debug/net6.0/TelstraRobot.deps.json
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/bin/Debug/net6.0/TelstraRobot.runtimeconfig.json
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/bin/Debug/net6.0/TelstraRobot.dll
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/bin/Debug/net6.0/ref/TelstraRobot.dll
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/bin/Debug/net6.0/TelstraRobot.pdb
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.csproj.AssemblyReference.cache
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.AssemblyInfoInputs.cache
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.AssemblyInfo.cs
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.csproj.CoreCompileInputs.cache
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.dll
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/ref/TelstraRobot.dll
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.pdb
+/Users/zutaowu/Documents/project/TelstraRobot/TelstraRobot/obj/Debug/net6.0/TelstraRobot.genruntimeconfig.cache
