@@ -1,17 +1,3 @@
-
-// Requirements:
-// The library allows for a simulation of a toy robot moving on a 6 x 6 square tabletop.
-// There are no obstructions on the table surface.
-// The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in this must be prevented, however further valid movement commands must still be allowed.
-// PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST.
-// (0,0) can be considered as the SOUTH WEST corner and (5,5) as the NORTH EAST corner.
-// The first valid command to the robot is a PLACE command. After that, any sequence of commands may be issued, in any order, including another PLACE command. The library should discard all commands in the sequence until a valid PLACE command has been executed.
-// The PLACE command should be discarded if it places the robot outside of the table surface.
-// Once the robot is on the table, subsequent PLACE commands could leave out the direction and only provide the coordinates. When this happens, the robot moves to the new coordinates without changing the direction.
-// MOVE will move the toy robot one unit forward in the direction it is currently facing.
-// LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
-// REPORT will announce the X,Y and orientation of the robot.
-// A robot that is not on the table can choose to ignore the MOVE, LEFT, RIGHT and REPORT commands.
 namespace TelstraRobot
 {
     /// <summary>
@@ -79,12 +65,20 @@ namespace TelstraRobot
             this.table = table;
         }
 
+        /// <summary>
+        /// print robot object with current position and direction
+        /// </summary>
+        /// <returns> current robot location and direction</returns>
         public override string ToString()
         {
             // Overide toString function to support Report
             return string.Format("{0},{1},{2}", position.X, position.Y, direction);
         }
 
+        /// <summary>
+        /// Print robot object with current position and direction
+        /// Disgard report command when current position and direction are invalid
+        /// </summary>
         public void Report()
         {
             // check if position and direction are both valid, if not valid, skip the report command.
@@ -96,6 +90,10 @@ namespace TelstraRobot
             }
         }
 
+        /// <summary>
+        /// Place robot at certain position and direction.
+        /// Can place robot at incorrect position. If so, other command will be disgarded.
+        /// </summary>
         public void Place(int x, int y, Direction direction)
         {
             // Place robot at certain position and direction.
@@ -104,6 +102,10 @@ namespace TelstraRobot
             this.direction = direction;
         }
 
+        /// <summary>
+        /// Place robot at certain position.
+        /// Can place robot at incorrect position. If so, other command will be disgarded.
+        /// </summary>
         public void Place(int x, int y)
         {
             // Place robot at certain position. direction remains the same
@@ -111,6 +113,16 @@ namespace TelstraRobot
             position.Y = y;
         }
 
+
+        /// <summary>
+        /// Check a position and direction
+        /// </summary>
+        /// <returns>
+        ///       if position and direction are both valid 
+        ///           returns true 
+        ///       else 
+        ///           return false 
+        /// </returns>
         public bool IsPosDirectionValid(Position p, Direction d)
         {
             // Check if position and direction valid
@@ -124,13 +136,24 @@ namespace TelstraRobot
             }
         }
 
+        /// <summary>
+        /// Check robot current position and direction
+        /// </summary>
+        /// <returns>
+        ///       if position and direction are both valid 
+        ///           returns true 
+        ///       else 
+        ///           return false 
+        /// </returns>
         public bool IsPosDirectionValid()
         {
             // Check if current robot's position and direction valid
             return IsPosDirectionValid(position, direction);
         }
 
-
+        /// <summary>
+        /// Rotate robot to left when current positon and direction are both valid
+        /// </summary>
         public void RotateLeft()
         {
             // Rotate left only when position and direction are both valid
@@ -144,6 +167,9 @@ namespace TelstraRobot
             }
         }
 
+        /// <summary>
+        /// Rotate robot to right when current positon and direction are both valid
+        /// </summary>
         public void RotateRight()
         {
             // Rotate right only when position and direction are both valid
@@ -157,6 +183,9 @@ namespace TelstraRobot
             }
         }
 
+        /// <summary>
+        /// Move robot when current positon and direction are both valid
+        /// </summary>
         public void Move()
         {
             // Move robot only when position and direction are both valid
@@ -191,9 +220,7 @@ namespace TelstraRobot
                     this.position = newPos;
                 }
             }
-
         }
-
 
         /// <summary>
         /// Run string command from console input. can be following commands
@@ -270,8 +297,4 @@ namespace TelstraRobot
             }
         }
     }
-
-
-
-
 }
