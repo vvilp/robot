@@ -1,3 +1,4 @@
+This project is developed and built on .NET 6
 
 To run application and unit Tests
     Run console app with the following command 
