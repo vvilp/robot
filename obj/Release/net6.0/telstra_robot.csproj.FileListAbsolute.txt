@@ -1,0 +1,15 @@
+/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/telstra_robot
+/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/telstra_robot.deps.json
+/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/telstra_robot.runtimeconfig.json
+/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/telstra_robot.dll
+/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/ref/telstra_robot.dll
+/Users/zutaowu/Documents/project/telstra_robot/bin/Release/net6.0/telstra_robot.pdb
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.csproj.AssemblyReference.cache
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.AssemblyInfoInputs.cache
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.AssemblyInfo.cs
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.csproj.CoreCompileInputs.cache
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.dll
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/ref/telstra_robot.dll
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.pdb
+/Users/zutaowu/Documents/project/telstra_robot/obj/Release/net6.0/telstra_robot.genruntimeconfig.cache
